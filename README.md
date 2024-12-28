@@ -16,19 +16,18 @@ We used a USB-based GNSS GPS puck and the VN-100 VectoNav IMU for data collectio
 ##### VN-100 VectoNav IMU
 ![vn-100-rugged](https://github.com/user-attachments/assets/7c60ed0e-e17e-4c02-ba53-d41ea1d8813b)
 
-We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```.
+We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```. Each contains both, GPS and IMU data. 
 
 ##### data_going_in_circles
-- We travelled 3 circular laps wth increasing speeds in each lap around the Ruggles Circle near Northeastern University.
-- The purpose of this dataset is solely to remove the hard and soft iron distortions from the data and calibrate the manetometer.
+
+- We travelled 3 circular laps, with increasing speeds in each lap, around the Ruggles Circle near Northeastern University.
+- The purpose of this dataset is solely to remove the hard and soft iron distortions from the data and calibrate the magnetometer.
   
 ##### data_driving
+
 - For this dataset, we drove around the streets of Boston for several minutes and ensured that our path had a lot of turns.
 - We returned to the point from where we started.
 - Using the calibration parameters obtained by working on the ```data_going_in_circles```, the magnetometer data is calibrated for this dataset too, and the entire sensor fusion and dead reckoning part of this project is performed on this dataset.
 
 ##### Videos of the data collection
-
-
-##### Link to the datasets
 
