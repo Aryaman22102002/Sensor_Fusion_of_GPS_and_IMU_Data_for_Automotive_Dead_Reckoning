@@ -36,11 +36,27 @@ We collected two different datasets namely: ```data_going_in_circles``` and ```d
 
 
 
+### Custom ROS 2 Messages and Drivers
+ < Tell what each message contains and what each driver does>
 
 
+### The lits of plots included in the analysis of the data
+
+##### Using the ```data_going_in_circles``` dataset:
+- The magnetometer X-Y plot before and after hard and soft iron calibration.
+
+##### Using the ```data_driving``` dataset:
+- The time series magnetometer data before and after the correction.
+- Magnetometer Yaw and Yaw Integrated from Gyro together.
+- Low Pass Filter, High Pass Filter, and Complementary Filter plots together.
+- Yaw from the Complementary filter and Yaw angle computed by the IMU together.
+- Velocity estimate from the GPS with Velocity estimate from accelerometer before adjustment.
+- Velocity estimate from the GPS with Velocity estimate from accelerometer after adjustment.
+- 𝜔𝑋̇ and 𝑦̈𝑜𝑏𝑠 plotted together.
+- A single plot showing the path followed shown by GPS & path followed estimated by IMU.
 
 
 ### Acknowledgements
 
-I would like to specially thank our course instructor Prof. Hanumat Singh as well as our course teaching assistants Vishnu Rohit Annadanam and Jasen Levoy who helped me immensely not only while doing this project but throught the course. They were great at teaching, managing the course, and were always available and enthusiastic to solve everyone's doubts.
+I would like to specially thank our course instructor Prof. Hanumant Singh as well as our course teaching assistants Vishnu Rohit Annadanam and Jasen Levoy who helped me immensely not only while doing this project but throught the course. They were great at teaching, managing the course, and were always available and enthusiastic to solve everyone's doubts.
 I would also like to thank Northeastern University for providing the students with the NUANCE autonomous car so that we could collect our data.
