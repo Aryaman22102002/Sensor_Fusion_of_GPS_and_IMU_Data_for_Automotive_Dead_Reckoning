@@ -31,3 +31,16 @@ We collected two different datasets namely: ```data_going_in_circles``` and ```d
 
 ##### Videos of the data collection
 
+
+
+
+
+
+
+
+
+
+### Acknowledgements
+
+I would like to specially thank our course instructor Prof. Hanumat Singh as well as our course teaching assistants Vishnu Rohit Annadanam and Jasen Levoy who helped me immensely not only while doing this project but throught the course. They were great at teaching, managing the course, and were always available and enthusiastic to solve everyone's doubts.
+I would also like to thank Northeastern University for providing the students with the NUANCE autonomous car so that we could collect our data.
