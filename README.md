@@ -31,16 +31,21 @@ We collected two different datasets namely: ```data_going_in_circles``` and ```d
 
 ##### Videos of the data collection
 
-
+- [For the ```data_going_in_circles``` dataset](https://drive.google.com/file/d/1-yoloWRnFQICCxjGrL79DWdCdvbKACdr/view?usp=sharing)
+- [For the ```data_driving``` dataset](https://drive.google.com/file/d/1S9o-afP9GGBGx-hGzHpTd-3-I1fUXB0i/view?usp=sharing)
 
 
 
 
 ### Custom ROS 2 Messages and Drivers
- < Tell what each message contains and what each driver does>
+The ```gps_msgs``` package contains a custom ROS 2 message called ```GPSmsg.msg``` that has ```header```, ```latitude```, ```longitude```, ```altitude```, ```utm_easting```, ```utm_northing```, ```zone```, and ```letter``` as fields.
+The ```imu_custom_message``` package contains a custom ROS 2 message called ```IMUmsg.msg``` that has ```header```, ```imu```, ```mag_field```, and ```raw_data (A string with any name containing the raw IMU string)``` as fields. 
+The ```gps_driver``` reads in serial data from the puck, parses it for the latitude, longitude and altitude. It converts the latitude and longitude to UTM. It then publishes this custom ROS 2 message over a topic called ```/gps```. 
+The ```imu_driver``` parses the $VNYMR string, to get accel, gyro, orientation (roll, pitch, yaw) and magnetometer data. It converts the Yaw, Pitch, Roll data into quaternions and publishes it as orientation in the same ```imu_custom_msg```.
 
 
-### The lits of plots included in the analysis of the data
+
+### The list of plots included in the analysis of the data
 
 ##### Using the ```data_going_in_circles``` dataset:
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
