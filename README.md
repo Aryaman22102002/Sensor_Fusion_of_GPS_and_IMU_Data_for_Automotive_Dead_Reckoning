@@ -2,17 +2,36 @@
 This project was done as a lab assignment for the EECE 5554 (Robotics Sensing and Navigation) course at Northeastern University.
 
 
+### Table of Contents
+* [Aim](#aim)
+* [Data Collection](#data-collection)
+  * [USB-based GNSS GPS puck](#usb-based-gnss-gps-puck)
+  * [VN-100 VectorNav IMU](#vn-100-vectornav-imu)
+  * [NUANCE Autonomous Car](#nuance-autonomous-car)
+  * [data_going_in_circles](#data-going-in-circles)
+  * [data_driving](#data-driving)
+  * [Videos of the data collection](#videos-of-the-data-collection)
+* [Custom ROS 2 Messages and Drivers](#custom-ros-2-messages-and-drivers)
+* [Launching the ROS 2 Drivers](#launching-the-ros-2-drivers)
+* [The list of plots included in the analysis of the data](#the-list-of-plots-included-in-the-analysis-of-the-data)
+  * [Using the data_going_in_circles dataset](#using-the-data-going-in-circles-dataset)
+  * [sing the data_driving dataset](#using-the-data-driving-dataset)
+* [Results](#results)
+* [Acknowledgements](#acknowledgements)
+
+
+  
 ### Aim 
 The main goal of the project was to collect GPS and IMU data using the NUANCE autonomous car provided by Northeastern University. For collecting the data, we had to create custom ROS 2 messages and drivers for the GPS and IMU sensors and combine those drivers to get a single custom message with a single timestamp. After collecting the data, we had to analyzed the IMU's noise characteristics through Allan Variance and calibrate magnetometer by correcting hard and soft iron distortions along with error compensation in IMU and GPS data. After that, we had to compensate for accelerometer bias to estimate vehicle’s forward velocity, and fuse the yaw angle computed from gyroscope and magnetometer data using a complementary filter to estimate heading for Dead Reckoning with IMU.
 
 
 ### Data Collection
-We used a USB-based GNSS GPS puck and the VN-100 VectoNav IMU for data collection. We attached these sensors to the NUANCE autonomous car. 
+We used a USB-based GNSS GPS puck and the VN-100 VectorNav IMU for data collection. We attached these sensors to the NUANCE autonomous car. 
 
 ##### USB-based GNSS GPS puck
 ![gps-ezgif com-webp-to-png-converter](https://github.com/user-attachments/assets/dfa6b4fe-38c9-49cc-ae0f-dd0d0631bc75)
 
-##### VN-100 VectoNav IMU
+##### VN-100 VectorNav IMU
 ![vn-100-rugged](https://github.com/user-attachments/assets/7c60ed0e-e17e-4c02-ba53-d41ea1d8813b)
 
 ##### NUANCE Autonomous Car
@@ -41,13 +60,20 @@ We collected two different datasets namely: ```data_going_in_circles``` and ```d
 - The ```imu_driver``` parses the $VNYMR string, to get accel, gyro, orientation (roll, pitch, yaw) and magnetometer data. It converts the Yaw, Pitch, Roll data into quaternions and publishes it as orientation in the same ```imu_custom_msg```.
 - Since the GNSS puck and the VectorNav IMU run at different frequencies, with the IMU having a much higher frequency, the timestamps obtained from the IMU are utilized while performing the analysis. 
 
+### Launching the ROS 2 Drivers
+To run the launch file that will launch both the GPS and IMU drivers together, please use the following command: <br>
+```ros2 launch imu_driver master_launch.py gps_port:=<Insert the GPS port's path> imu_port:=<Insert the IMU port's path>```
+
+For example,<br>
+```ros2 launch imu_driver master_launch.py gps_port:=/dev/pts/3 imu_port:=/dev/pts/4```
+
 
 ### The list of plots included in the analysis of the data
 
-##### Using the ```data_going_in_circles``` dataset:
+##### Using the data_going_in_circles dataset
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
 
-##### Using the ```data_driving``` dataset:
+##### Using the data_driving dataset
 - The time series magnetometer data before and after the correction.
 - Magnetometer Yaw and Yaw Integrated from Gyro together.
 - Low Pass Filter, High Pass Filter, and Complementary Filter plots together.
