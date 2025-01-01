@@ -36,7 +36,7 @@ We used a USB-based GNSS GPS puck and the VN-100 VectorNav IMU for data collecti
 ##### NUANCE Autonomous Car
 ![NUACNE](https://github.com/user-attachments/assets/515a50da-5f9c-4a47-9ce9-91551e6d95a3)
 
-We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```. Each contains both, GPS and IMU data. 
+We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```. Each contains both, GPS and IMU data. Both the datasets are described below:
 
 ##### data going in circles
 - We travelled 3 circular laps, with increasing speeds in each lap, around the Ruggles Circle near Northeastern University.
