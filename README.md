@@ -14,11 +14,10 @@ This project was done as a lab assignment for the EECE 5554 (Robotics Sensing an
 * [Custom ROS 2 Messages and Drivers](#custom-ros-2-messages-and-drivers)
 * [Launching the ROS 2 Drivers](#launching-the-ros-2-drivers)
 * [The list of plots included in the analysis of the data](#the-list-of-plots-included-in-the-analysis-of-the-data)
-  * [Using the data_going_in_circles dataset](#using-the-data-going-in-circles-dataset)
+  * [Using the ```data_going_in_circles``` dataset](#using-the-data-going-in-circles-dataset)
   * [sing the data_driving dataset](#using-the-data-driving-dataset)
 * [Results](#results)
 * [Acknowledgements](#acknowledgements)
-
 
   
 ### Aim 
@@ -70,7 +69,7 @@ For example,<br>
 
 ### The list of plots included in the analysis of the data
 
-##### Using the data_going_in_circles dataset
+##### Using the ```data_going_in_circles``` dataset
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
 
 ##### Using the data_driving dataset
