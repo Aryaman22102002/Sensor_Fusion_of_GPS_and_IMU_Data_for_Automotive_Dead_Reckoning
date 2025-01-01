@@ -69,10 +69,10 @@ For example,<br>
 
 ### The list of plots included in the analysis of the data
 
-##### Using the data going in circles dataset
+##### Using the ```data going in circles``` dataset
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
 
-##### Using the data driving dataset
+##### Using the ```data driving``` dataset
 - The time series magnetometer data before and after the correction.
 - Magnetometer Yaw and Yaw Integrated from Gyro together.
 - Low Pass Filter, High Pass Filter, and Complementary Filter plots together.
