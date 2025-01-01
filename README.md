@@ -8,14 +8,14 @@ This project was done as a lab assignment for the EECE 5554 (Robotics Sensing an
   * [USB-based GNSS GPS puck](#usb-based-gnss-gps-puck)
   * [VN-100 VectorNav IMU](#vn-100-vectornav-imu)
   * [NUANCE Autonomous Car](#nuance-autonomous-car)
-  * [data_going_in_circles](#data-going-in-circles)
-  * [data_driving](#data-driving)
+  * [data going in circles](#data-going-in-circles)
+  * [data driving](#data-driving)
   * [Videos of the data collection](#videos-of-the-data-collection)
 * [Custom ROS 2 Messages and Drivers](#custom-ros-2-messages-and-drivers)
 * [Launching the ROS 2 Drivers](#launching-the-ros-2-drivers)
 * [The list of plots included in the analysis of the data](#the-list-of-plots-included-in-the-analysis-of-the-data)
-  * [Using the ```data_going_in_circles``` dataset](#using-the-data-going-in-circles-dataset)
-  * [sing the data_driving dataset](#using-the-data-driving-dataset)
+  * [Using the data going in circles dataset](#using-the-data-going-in-circles-dataset)
+  * [Using the data driving dataset](#using-the-data-driving-dataset)
 * [Results](#results)
 * [Acknowledgements](#acknowledgements)
 
@@ -38,11 +38,11 @@ We used a USB-based GNSS GPS puck and the VN-100 VectorNav IMU for data collecti
 
 We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```. Each contains both, GPS and IMU data. 
 
-##### data_going_in_circles
+##### data going in circles
 - We travelled 3 circular laps, with increasing speeds in each lap, around the Ruggles Circle near Northeastern University.
 - The purpose of this dataset is solely to remove the hard and soft iron distortions from the data and calibrate the magnetometer.
   
-##### data_driving
+##### data driving
 - For this dataset, we drove around the streets of Boston for several minutes and ensured that our path had a lot of turns.
 - We returned to the point from where we started.
 - Using the calibration parameters obtained by working on the ```data_going_in_circles```, the magnetometer data is calibrated for this dataset too, and the entire sensor fusion and dead reckoning part of this project is performed on this dataset.
@@ -69,10 +69,10 @@ For example,<br>
 
 ### The list of plots included in the analysis of the data
 
-##### Using the ```data_going_in_circles``` dataset
+##### Using the data going in circles dataset
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
 
-##### Using the data_driving dataset
+##### Using the data driving dataset
 - The time series magnetometer data before and after the correction.
 - Magnetometer Yaw and Yaw Integrated from Gyro together.
 - Low Pass Filter, High Pass Filter, and Complementary Filter plots together.
