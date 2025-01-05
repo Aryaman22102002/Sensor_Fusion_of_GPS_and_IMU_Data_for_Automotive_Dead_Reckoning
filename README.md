@@ -27,27 +27,27 @@ The main goal of the project was to collect GPS and IMU data using the NUANCE au
 ### Data Collection
 We used a USB-based GNSS GPS puck and the VN-100 VectorNav IMU for data collection. We attached these sensors to the NUANCE autonomous car. 
 
-##### USB-based GNSS GPS puck
+#### USB-based GNSS GPS puck
 ![gps-ezgif com-webp-to-png-converter](https://github.com/user-attachments/assets/dfa6b4fe-38c9-49cc-ae0f-dd0d0631bc75)
 
-##### VN-100 VectorNav IMU
+#### VN-100 VectorNav IMU
 ![vn-100-rugged](https://github.com/user-attachments/assets/7c60ed0e-e17e-4c02-ba53-d41ea1d8813b)
 
-##### NUANCE Autonomous Car
+#### NUANCE Autonomous Car
 ![NUACNE](https://github.com/user-attachments/assets/515a50da-5f9c-4a47-9ce9-91551e6d95a3)
 
 We collected two different datasets namely: ```data_going_in_circles``` and ```data_driving```. Each contains both, GPS and IMU data. Both the datasets are described below:
 
-##### data going in circles
+#### data going in circles
 - We travelled 3 circular laps, with increasing speeds in each lap, around the Ruggles Circle near Northeastern University.
 - The purpose of this dataset is solely to remove the hard and soft iron distortions from the data and calibrate the magnetometer.
   
-##### data driving
+#### data driving
 - For this dataset, we drove around the streets of Boston for several minutes and ensured that our path had a lot of turns.
 - We returned to the point from where we started.
 - Using the calibration parameters obtained by working on the ```data_going_in_circles```, the magnetometer data is calibrated for this dataset too, and the entire sensor fusion and dead reckoning part of this project is performed on this dataset.
 
-##### Videos of the data collection
+#### Videos of the data collection
 - [For the ```data_going_in_circles``` dataset](https://drive.google.com/file/d/1-yoloWRnFQICCxjGrL79DWdCdvbKACdr/view?usp=sharing)
 - [For the ```data_driving``` dataset](https://drive.google.com/file/d/1S9o-afP9GGBGx-hGzHpTd-3-I1fUXB0i/view?usp=sharing)
 
@@ -69,10 +69,10 @@ For example,<br>
 
 ### The list of plots included in the analysis of the data
 
-##### Using the ```data going in circles``` dataset
+#### Using the ```data going in circles``` dataset
 - The magnetometer X-Y plot before and after hard and soft iron calibration.
 
-##### Using the ```data driving``` dataset
+#### Using the ```data driving``` dataset
 - The time series magnetometer data before and after the correction.
 - Magnetometer Yaw and Yaw Integrated from Gyro together.
 - Low Pass Filter, High Pass Filter, and Complementary Filter plots together.
